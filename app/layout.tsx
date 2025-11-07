@@ -83,7 +83,7 @@ function Header() {
           <div className="hidden md:flex justify-center">
             <Link href="/">
               <Image 
-                src="/images/logo.jpg" 
+                src="/images/logo.jpg" // Corrected path
                 alt="Proudly Laikipian Logo" 
                 width={50}  // You can adjust this
                 height={50} // You can adjust this
@@ -141,16 +141,20 @@ function Footer() {
     <footer className="bg-grain py-20 md:py-32 text-gray-300">
       <div className="container mx-auto px-6">
         
-        {/* --- UPDATED: Footer Logo (Image) --- */}
+        {/* --- UPDATED: Footer Logo (Image + Text) --- */}
         <div className="footer-logo">
-          <Link href="/">
+          <Link href="/" className="flex items-center justify-center gap-4">
             <Image 
-              src="/images/logo.jpg" 
+              src="/images/logo.jpg" // Corrected path
               alt="Proudly Laikipian Logo" 
               width={80}  // You can adjust this
               height={80} // You can adjust this
               className="h-20 w-auto" // Controls the visual size
             />
+            {/* --- NEW: Added the styled text logo --- */}
+            <h2 className="footer-logo-text hidden sm:block">
+              Proudly Laikipian
+            </h2>
           </Link>
         </div>
         
@@ -197,10 +201,10 @@ function Footer() {
           
         </div>
         
-        {/* Copyright */}
+        {/* --- UPDATED: Copyright --- */}
         <div className="border-t border-gray-700 mt-16 pt-8">
           <p className="text-sm text-gray-500 italic">
-            © 2025 by Proudly Laikipian
+            © 2025 by <span className="copyright-brand">Proudly Laikipian</span>
           </p>
         </div>
         

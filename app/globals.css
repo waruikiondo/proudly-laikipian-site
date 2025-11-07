@@ -258,3 +258,22 @@ body {
   letter-spacing: 0.2em; 
   @apply text-4xl md:text-6xl text-white uppercase text-center mb-16;
 }
+/* --- UPDATED styles for Footer Logo --- */
+
+.footer-logo {
+  @apply flex justify-center items-center mb-16;
+}
+
+.footer-logo-text {
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.2em; 
+  @apply text-4xl md:text-6xl text-white uppercase ml-4; /* Added ml-4 for spacing */
+}
+
+/* --- Style for the Copyright text --- */
+.copyright-brand {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #ccc; /* A bit lighter than the surrounding text */
+}

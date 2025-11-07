@@ -249,8 +249,8 @@ function MeetTheGuideSection() {
             <p className="text-lg text-gray-300 leading-relaxed mb-12">
               Led by an instinct for the wild, our journeys are rich in feeling and thoughtful in detail. Every experience is chosen with intention and each moment is crafted not just for excellence, but for the way it lingers, long after you return.
             </p> 
-            <a href="#" className="essence-link mb-24">
-              Our Essence
+            <a href="/about" className="essence-link mb-24">
+              Our Story
             </a>
           </div>
         </div>
