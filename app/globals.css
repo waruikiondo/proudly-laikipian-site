@@ -24,3 +24,237 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* --- Our Custom Global Styles --- */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FDFDFD;
+  color: #333;
+}
+
+.hero-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 3.5rem; /* mobile */
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 5rem; /* desktop */
+  }
+}
+
+.nav-link {
+  @apply text-sm uppercase tracking-wider font-medium;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 1.5s ease-in-out;
+  opacity: 0;
+}
+
+.hero-video.active {
+  opacity: 1;
+}
+/* --- New styles for the About Intro Section --- */
+
+.bg-grain {
+  /* A subtle, repeating grain texture */
+  background-image: url('https://www.transparenttextures.com/patterns/stucco.png');
+  background-color: #2a2a2a; /* A deep, warm charcoal */
+}
+
+.section-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+/* --- New styles for the Tailored Section --- */
+
+.bg-light-beige {
+  background-color: #f7f3ed;
+}
+
+.section-title-dark {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  color: #333; /* Dark text for light background */
+}
+
+.plan-journey-link {
+  @apply text-sm uppercase tracking-widest font-medium text-gray-800 relative pb-2;
+}
+
+.plan-journey-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* Line is 50% of the text width */
+  height: 1px;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+.plan-journey-link:hover::after {
+  width: 100%; /* Line expands on hover */
+}
+/* --- New styles for the Meet The Guide Section --- */
+
+.bg-dark-grain {
+  /* Repeating grain texture with a deep brown */
+  background-image: url('https://www.transparenttextures.com/patterns/stucco.png');
+  background-color: #4a3b2a; /* Deep, earthy brown */
+}
+
+.essence-link {
+  @apply text-sm uppercase tracking-widest font-medium text-gray-300 relative pb-2;
+}
+
+.essence-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* Line is 50% of the text width */
+  height: 1px;
+  background-color: #f0f0f0; /* Light line for dark background */
+  transition: width 0.3s ease;
+}
+
+.essence-link:hover::after {
+  width: 100%; /* Line expands on hover */
+}
+/* --- New styles for the Commitment Section --- */
+
+.bg-eco-beige {
+  /* A light, earthy green/beige from the screenshot */
+  background-color: #e0ddd7;
+}
+/* --- New styles for the Footer --- */
+
+.footer-logo {
+  font-family: 'Times New Roman', Times, serif;
+  /* This 'letter-spacing' is what gives it that wide, premium feel */
+  letter-spacing: 0.2em; 
+  @apply text-4xl md:text-6xl text-white uppercase text-center mb-16;
+}
+
+.footer-title {
+  font-family: 'Times New Roman', Times, serif;
+  @apply text-xl uppercase tracking-wider text-gray-200 mb-5;
+}
+
+.footer-link {
+  @apply text-base text-gray-400 hover:text-white transition duration-300 block mb-3;
+}
+/* ... existing code ... */
+.footer-link {
+  @apply text-base text-gray-400 hover:text-white transition duration-300 block mb-3;
+}
+
+/* --- NEW STYLES for Active Nav Link --- */
+.nav-link-active {
+  @apply text-sm uppercase tracking-wider font-medium relative;
+}
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor; /* Will be white or black based on text color */
+}
+/* --- NEW STYLE for light links on dark backgrounds --- */
+.plan-journey-link-light {
+  @apply text-sm uppercase tracking-widest font-medium text-gray-300 relative pb-2;
+}
+
+.plan-journey-link-light::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* Line is 50% of the text width */
+  height: 1px;
+  background-color: #f0f0f0; /* Light line */
+  transition: width 0.3s ease;
+}
+
+.plan-journey-link-light:hover::after {
+  width: 100%; /* Line expands on hover */
+}
+/* --- FIX: Missing style from homepage --- */
+.bg-eco-beige {
+  /* A light, earthy green/beige from the screenshot */
+  background-color: #e0ddd7;
+}
+
+/* --- NEW styles for About Page Values Section --- */
+.values-text-block {
+  /* Defines the padding and min-height for the two blocks */
+  @apply py-20 md:py-32 px-8 md:px-24 flex items-center;
+  min-height: 50vh; /* Ensures each block has space */
+}
+/* --- NEW STYLE for italic title on dark background --- */
+.section-title-italic {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-style: italic; /* This makes it italic */
+  color: #f0f0f0;
+  @apply text-4xl md:text-5xl uppercase tracking-wider mb-10;
+}
+/* --- NEW style for Plan Page step number --- */
+.step-number {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #888; /* A muted gray color */
+  @apply text-2xl mb-4;
+}
+/* --- NEW styles for Book Page Form --- */
+
+.form-label {
+  @apply text-sm uppercase tracking-wider font-medium text-gray-400 mb-2 block;
+}
+
+.form-input {
+  @apply w-full bg-transparent border-b border-gray-600 text-white text-lg py-3 focus:outline-none focus:border-white transition duration-300;
+}
+
+/* Style for the checkboxes */
+.form-checkbox-label {
+  @apply text-lg text-gray-300 relative flex items-center cursor-pointer mb-3;
+}
+
+.form-checkbox {
+  @apply appearance-none w-5 h-5 border-2 border-gray-600 rounded-sm mr-3 cursor-pointer;
+}
+
+.form-checkbox:checked {
+  @apply bg-white border-white;
+}
+
+/* We can add a custom checkmark later if we want */
+
+.form-button {
+  @apply text-white text-lg uppercase tracking-widest font-medium py-3 px-10 border border-gray-500 rounded-md
+         hover:bg-white hover:text-gray-900 transition duration-300 mt-12;
+}
+.footer-logo {
+  font-family: 'Times New Roman', Times, serif;
+  /* This 'letter-spacing' is what gives it that wide, premium feel */
+  letter-spacing: 0.2em; 
+  @apply text-4xl md:text-6xl text-white uppercase text-center mb-16;
+}
