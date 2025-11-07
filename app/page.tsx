@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'; // Import the Next.js Image component
-import Link from 'next/link'; // --- 1. IMPORT THE LINK COMPONENT ---
+import Link from 'next/link';
 import FullBleedImage from './components/FullBleedImage'; 
 
 // --- Video Data ---
@@ -98,7 +98,9 @@ function Hero() {
           {heroVideos.map((video, index) => (
             <video
               key={video.id}
-              ref={el => videoRefs.current[index] = el}
+              ref={(el) => {
+                videoRefs.current[index] = el;
+              }}
               className={`hero-video ${index === 0 ? 'active' : ''}`}
               playsInline
               muted
@@ -118,9 +120,9 @@ function Hero() {
         </h1>
         <p className="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
           Discover the untamed beauty of Laikipia. We craft bespoke journeys that connect you with the land, its wildlife, and its people. Your authentic Kenyan adventure awaits.
-        </p>
+        </p> 
+        {/* --- THIS IS THE FIX: Was </f> --- */}
         
-        {/* --- 2. UPDATED LINK --- */}
         <Link 
           href="/plan" 
           className="bg-white text-gray-900 text-sm uppercase font-medium py-4 px-8 rounded-md hover:bg-gray-200 transition duration-300"
@@ -153,13 +155,12 @@ function AboutIntroSection() {
           We don't just know Laikipia. We are Proudly Laikipian.
         </p>
 
-        {/* --- 3. UPDATED LINK --- */}
         <Link 
           href="/book" 
           className="text-white text-sm uppercase tracking-widest font-medium py-3 px-6 border border-gray-500 rounded-md
                      hover:bg-white hover:text-gray-900 transition duration-300"
         >
-          BOOK YOUR JOURNEY
+          Book Your Journey
         </Link>
         
       </div>
@@ -216,7 +217,6 @@ function TailoredSection() {
               Whether you're tracking wild dogs on foot, or soaring above the Great Valley in a helicopter, every detail is handled with care and precision. With you every step of the way, our concierge team ensures your journey is seamless, from start to finish.
             </p> 
             
-            {/* --- 4. UPDATED LINK --- */}
             <Link href="/plan" className="plan-journey-link">
               Plan Your Journey
             </Link>
@@ -301,7 +301,6 @@ function CommitmentSection() {
               To explore the wild heart of Laikipia is a rare privilege. This privilege comes with a profound responsibility: to tread lightly, to give back to the community, and to help preserve this land for generations to come. With every journey, our goal is simple: to leave Laikipia better than we found it.
             </p> 
             
-            {/* --- 5. UPDATED LINK --- */}
             <Link href="/book" className="plan-journey-link">
               Book Your Journey
             </Link>
