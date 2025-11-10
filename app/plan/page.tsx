@@ -28,12 +28,10 @@ function PlanHero() {
           <br />
           AS UNIQUE AS
           <br />
-          YOU ARE
+          YOU 
         </h1>
         <p className="text-lg md:text-xl font-light mb-10 max-w-3xl mx-auto">
-          No two travelers are the same, and no two of our journeys are, either. 
-          Tell us your dream, your needs, and your passions. We'll handle every 
-          detail to build an experience that is authentically yours.
+         Every traveler is different, and so is every journey we create. Share your dreams and interests, and we will craft an experience that is truly yours.
         </p>
       </div>
       
@@ -64,7 +62,7 @@ function HowItWorksStep1() {
               {/* Inset Image with White Border */}
               <div className="bg-white p-2 shadow-2xl">
                 <Image
-                  src="/images/plan-step1-inset.png" // Your new inset elephant photo
+                  src="/images/mtkenya.jpg" // Your new inset elephant photo
                   alt="An elephant in the Laikipia plains"
                   width={800} // Set base width
                   height={600} // Set base height
@@ -88,15 +86,11 @@ function HowItWorksStep1() {
               TO DISCOVERY
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              It all starts with a simple conversation. You'll be paired with a 
-              Laikipia specialist to explore your ideas, curiosities, 
-              and dreams for this journey.
+             It all starts with a simple conversation. You will  be paired with a specialist to explore your ideas, curiosities, and dreams for this journey. At Proudly Laikipian, we curate experiences that go beyond itineraries,  from the heart of Laikipia to the raw  landscapes of Northern Kenya, from the sandy beaches of the Coast to once-in-a-lifetime safaris in the Maasai Mara. For hikers, we offer Mount Kenya treks and adventures across the Aberdare Ranges. 
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-12">
-              This isn't about booking a package; it's about co-creating 
-              an experience. We listen to the moments you're seeking, 
-              and from that spark, we begin to map out a journey that is 
-              entirely, authentically yours.
+              Let us co-create your  experience and  map out a journey that is entirely, authentically yours!
+
             </p>
           </div>
         </div>
@@ -136,16 +130,12 @@ function HowItWorksStep2() {
             </h2>
 
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              To begin crafting your bespoke itinerary, we ask for a $20 
-              planning fee, which will be fully applied to your final booking.
+             This is where our local expertise becomes your own.
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed mb-12">
-              This is where our local expertise becomes your own. Using the 
-              insights from our call, your specialist will activate our 
-              private network to design a seamless, one-of-a-kind itinerary. 
-              Every day is shaped by your passions and our deep, authentic 
-              knowledge of the land.
+              Using the insights from our conversation, your specialist will activate our private network to design a seamless, one-of-a-kind itinerary. Every day is shaped by your passions and our deep, authentic knowledge of the land.
+
             </p>
             
           </div>
@@ -175,15 +165,11 @@ function HowItWorksStep3() {
             </h2>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              This is the moment it becomes real. Upon your approval, 
-              we confirm all bookings with our trusted, hand-picked partners.
+              This is the moment it all comes to life. Once you approve your itinerary, we confirm all the details with our trusted local partners
             </p>
             
             <p className="text-lg text-gray-700 leading-relaxed mb-12">
-              You'll receive a detailed itinerary and a personal packing guide. 
-              From the moment you land to the moment you depart, our 
-              on-the-ground team is available 24/7, ensuring a seamless, 
-              worry-free, and truly profound travel experience.
+               You will receive a complete itinerary and a personal packing guide. From the moment you arrive to the moment you depart, our on-the-ground team will be there, ensuring a smooth journey from start to finish.
             </p>
             
           </div>
@@ -235,16 +221,12 @@ function HowItWorksStep4() {
             </h2>
 
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              The moment you land, your journey truly begins. A personal 
-              representative from our team will greet you, guide you 
-              seamlessly through immigration, and transport you to your 
-              first destination.
+             A personal representative from our team will meet you, guide you through arrival formalities, and accompany you to your first destination
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed mb-12">
-              Our concierge team is at your service 24/7, handling every detail. 
-              With all logistics managed, your only task is to be present, 
-              sit back, and allow your Laikipian adventure to unfold before you.
+              Our team is available at all times, managing every detail. With all logistics in place, your focus is simply to be present as your adventure unfolds
+
             </p>
 
             <a 

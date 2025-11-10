@@ -8,10 +8,19 @@ import FullBleedImage from './components/FullBleedImage';
 // --- Video Data ---
 // Make sure these paths match your files in public/videos/
 const heroVideos = [
+  { id: 4, src: "/videos/ellis.mp4" },
   { id: 1, src: "/videos/first.mp4" },
+    { id: 4, src: "/videos/mtkenya.mp4" },
   { id: 2, src: "/videos/second.mp4" },
+  { id: 4, src: "/videos/coast2.mp4" },
   { id: 3, src: "/videos/third.mp4" },
+  { id: 4, src: "/videos/ellisunny.mp4" },
   { id: 4, src: "/videos/fourth.mp4" },
+
+   { id: 4, src: "/videos/savannah.mp4" },
+   { id: 4, src: "/videos/coast.mp4" },
+   
+    
 ];
 
 /*
@@ -119,7 +128,7 @@ function Hero() {
           Find Your Escape
         </h1>
         <p className="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
-          Discover the untamed beauty of Laikipia. We craft bespoke journeys that connect you with the land, its wildlife, and its people. Your authentic Kenyan adventure awaits.
+Discover the untamed beauty of Kenya.
         </p> 
         {/* --- THIS IS THE FIX: Was </f> --- */}
         
@@ -148,11 +157,11 @@ function AboutIntroSection() {
         </h2>
 
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
-          Laikipia isn't just a destination for us; it's our backyard. Our roots are woven into this land, from the high plateaus to the hidden valleys. We share exclusive access and ancestral knowledge that unlocks the true essence of this wild paradise. We guide you beyond the well-trodden paths, revealing the Laikipia you didn't know to ask for.
-        </p>
+Kenya is more than a destination for us; it is where our story begins. From the vast plains of Laikipia to the peaks of Mount Kenya, the rugged north, and the sandy coast, our roots run deep across this land. We share local insight and connections that open doors few travelers see, guiding you beyond the familiar  into the Kenya that lives off the beaten track.
+</p>
         
         <p className="text-lg md:text-xl text-gray-300 italic mb-12">
-          We don't just know Laikipia. We are Proudly Laikipian.
+          We don't just know Kenya. We are Proudly Laikipian.
         </p>
 
         <Link 
@@ -178,7 +187,7 @@ function TailoredSection() {
         <div className="relative min-h-[70vh] lg:min-h-[90vh]">
           {/* Background Image */}
           <Image
-            src="/images/tailored-bg.png" // Your large aerial background
+            src="/images/plan-step1-inset.png" // Your large aerial background
             alt="Aerial view of Laikipia landscape"
             layout="fill"
             objectFit="cover"
@@ -207,12 +216,11 @@ function TailoredSection() {
         <div className="relative z-20 flex items-center py-16 px-8 md:p-24 bg-light-beige">
           <div className="max-w-md">
             <h2 className="section-title-dark text-4xl md:text-5xl uppercase tracking-wider mb-10">
-              EVERYTHING, THOUGHTFULLY
-              TAILORED TO YOU
+              EVERY DETAIL, 
+              DESIGNED FOR YOU
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Explore Laikipia your way. Our travel specialists expertly curate journeys tailored to you. We work only with trusted partners, whose services we have tried and tested.
-            </p>
+Explore Kenya your way. We work with trusted partners whose services we know and rely on. Whether you are walking with rhinos in Samburu, experiencing a cultural dance in the Maasai Mara, watching the rare black leopards in Laikipia, or trekking to the top of Mount Kenya, every detail is handled with care and precision.            </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-12">
               Whether you're tracking wild dogs on foot, or soaring above the Great Valley in a helicopter, every detail is handled with care and precision. With you every step of the way, our concierge team ensures your journey is seamless, from start to finish.
             </p> 
@@ -241,13 +249,12 @@ function MeetTheGuideSection() {
           {/* This content will scroll */}
           <div className="max-w-md">
             <h2 className="section-title text-4xl md:text-5xl uppercase tracking-wider mb-10">
-              MEET YOUR GUIDE
+              MEET YOUR KUHI
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              We bring an unapologetically authentic approach to Laikipian travel. Carving space in an industry rarely led by indigenous voices, we're reshaping who you turn to for genuine local experiences.
-            </p>
+Kuhi is a Kenyan traveller, photographer, and storyteller with a deep love for nature, hiking, and wildlife. Through Proudly Laikipian, she shares the Kenya that raised her. The open skies of Laikipia, the raw beauty of the north, and the diversity of the country’s wild spaces. These places have shaped her eye, her rhythm, and her sense of belonging.            </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-12">
-              Led by an instinct for the wild, our journeys are rich in feeling and thoughtful in detail. Every experience is chosen with intention and each moment is crafted not just for excellence, but for the way it lingers, long after you return.
+Her mission is to guide others into this Kenya by curating journeys that invite travellers to slow down, to listen, and to see the land as she sees it: alive, untamed, and endlessly layered. Kuhi often travels with her guests, camera in hand, watching them fall in love with the places she already calls home. Because when they see Kenya through their eyes, she gets to witness that and it reminds her why she started Proudly Laikipian.
             </p> 
             <a href="/about" className="essence-link mb-24">
               Our Story
@@ -259,7 +266,7 @@ function MeetTheGuideSection() {
         {/* This div sticks to the top within its parent 'section' */}
         <div className="relative h-[70vh] lg:h-screen lg:sticky lg:top-0">
           <Image
-            src="/images/guide-portrait.png" // Your new guide portrait
+            src="/images/kuhi-paul.jpg" // Your new guide portrait
             alt="A guide from Proudly Laikipian on a safari vehicle"
             layout="fill"
             objectFit="cover"
@@ -293,12 +300,12 @@ function CommitmentSection() {
         <div className="relative z-10 flex items-center py-16 px-8 md:p-24 bg-eco-beige lg:order-1">
           <div className="max-w-md">
             <h2 className="section-title-dark text-4xl md:text-5xl uppercase tracking-wider mb-10">
-              OUR PLEDGE AS
+              OUR
               <br />
-              GUARDIANS OF LAIKIPIA
+              PLEDGE
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-12">
-              To explore the wild heart of Laikipia is a rare privilege. This privilege comes with a profound responsibility: to tread lightly, to give back to the community, and to help preserve this land for generations to come. With every journey, our goal is simple: to leave Laikipia better than we found it.
+              To explore the wild heart of Kenya is a rare privilege. This privilege comes with a profound responsibility: to tread lightly, to give back to the community, and to help preserve this land for generations to come. With every journey, our goal is simple: to leave Laikipia better than we found it.
             </p> 
             
             <Link href="/book" className="plan-journey-link">

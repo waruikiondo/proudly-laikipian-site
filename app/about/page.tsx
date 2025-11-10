@@ -24,18 +24,7 @@ function AboutHero() {
       </div>
       
       {/* Hero Content */}
-      <div className="relative z-10 p-4 max-w-4xl">
-        <h1 className="hero-title mb-6">
-          A DEEPER, MORE AUTHENTIC
-          <br />
-          PERSPECTIVE ON TRAVEL
-        </h1>
-        <p className="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
-          Being indigenous and locally-founded, Proudly Laikipian is a rare presence in
-          luxury Kenyan travel. Everything we do carries the weight of heritage and the
-          intimacy of local knowledge.
-        </p>
-      </div>
+      
       
     </main>
   );
