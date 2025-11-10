@@ -49,7 +49,7 @@ function HowItWorksStep1() {
         <div className="relative min-h-[70vh] lg:min-h-[90vh] lg:order-2">
           {/* Background Image */}
           <Image
-            src="/images/plan-step1-bg.png" // Your new large background
+            src="/images/about-story-bg.png" // Your new large background
             alt="Aerial view of Laikipia"
             layout="fill"
             objectFit="cover"
