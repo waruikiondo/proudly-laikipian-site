@@ -200,7 +200,7 @@ function TailoredSection() {
               {/* Inset Image with White Border */}
               <div className="bg-white p-2 shadow-2xl">
                 <Image
-                  src="/images/tailored-inset.png" // Your inset helicopter photo
+                  src="/images/plan-step1-inset.png" // Your inset helicopter photo
                   alt="Helicopter flying over Kenyan landscape"
                   width={800} // Set base width
                   height={600} // Set base height
@@ -266,7 +266,7 @@ Her mission is to guide others into this Kenya by curating journeys that invite 
         {/* This div sticks to the top within its parent 'section' */}
         <div className="relative h-[70vh] lg:h-screen lg:sticky lg:top-0">
           <Image
-            src="/images/kuhi-paul.jpg" // Your new guide portrait
+            src="/images/Kuhi-paul.jpg" // Your new guide portrait
             alt="A guide from Proudly Laikipian on a safari vehicle"
             layout="fill"
             objectFit="cover"
