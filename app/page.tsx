@@ -187,7 +187,7 @@ function TailoredSection() {
         <div className="relative min-h-[70vh] lg:min-h-[90vh]">
           {/* Background Image */}
           <Image
-            src="/images/plan-step1-inset.png" // Your large aerial background
+            src="/images/leopard-close.jpg" // Your large aerial background
             alt="Aerial view of Laikipia landscape"
             layout="fill"
             objectFit="cover"
@@ -286,7 +286,7 @@ function CommitmentSection() {
         {/* Left Column: Image (order-2 on mobile) */}
         <div className="relative min-h-[70vh] lg:min-h-[90vh] lg:order-2">
           <Image
-            src="/images/laikipia.png" // Your new landscape photo
+            src="/images/dam.jpg" // Your new landscape photo
             alt="Aerial view of Laikipia's rivers and landscape"
             layout="fill"
             objectFit="cover"

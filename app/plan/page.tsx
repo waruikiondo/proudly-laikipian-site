@@ -57,21 +57,7 @@ function HowItWorksStep1() {
           />
           
           {/* Inset Image Container (for positioning) */}
-          <div className="absolute inset-0 flex items-center justify-center p-8">
-            <div className="relative w-full max-w-md lg:max-w-none lg:w-[120%] lg:ml-24 z-10">
-              {/* Inset Image with White Border */}
-              <div className="bg-white p-2 shadow-2xl">
-                <Image
-                  src="/images/mtkenya.jpg" // Your new inset elephant photo
-                  alt="An elephant in the Laikipia plains"
-                  width={800} // Set base width
-                  height={600} // Set base height
-                  layout="responsive"
-                  objectFit="cover"
-                />
-              </div>
-            </div>
-          </div>
+         
         </div>
 
         {/* Right Column: Text content (order-1 on mobile) */}
@@ -110,7 +96,7 @@ function HowItWorksStep2() {
         {/* Left Column: Image (this part will be sticky) */}
         <div className="relative h-[70vh] lg:h-screen lg:sticky lg:top-0">
           <Image
-            src="/images/plan-step2-image.png" // Your new safari vehicle image
+            src="/images/maasai.jpeg" // Your new safari vehicle image
             alt="A safari vehicle overlooking the Laikipia plains"
             layout="fill"
             objectFit="cover"
