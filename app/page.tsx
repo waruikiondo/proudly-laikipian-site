@@ -221,9 +221,7 @@ function TailoredSection() {
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
 Explore Kenya your way. We work with trusted partners whose services we know and rely on. Whether you are walking with rhinos in Samburu, experiencing a cultural dance in the Maasai Mara, watching the rare black leopards in Laikipia, or trekking to the top of Mount Kenya, every detail is handled with care and precision.            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-12">
-              Whether you're tracking wild dogs on foot, or soaring above the Great Valley in a helicopter, every detail is handled with care and precision. With you every step of the way, our concierge team ensures your journey is seamless, from start to finish.
-            </p> 
+            
             
             <Link href="/plan" className="plan-journey-link">
               Plan Your Journey
@@ -249,7 +247,7 @@ function MeetTheGuideSection() {
           {/* This content will scroll */}
           <div className="max-w-md">
             <h2 className="section-title text-4xl md:text-5xl uppercase tracking-wider mb-10">
-              MEET YOUR KUHI
+              MEET KUHI
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
 Kuhi is a Kenyan traveller, photographer, and storyteller with a deep love for nature, hiking, and wildlife. Through Proudly Laikipian, she shares the Kenya that raised her. The open skies of Laikipia, the raw beauty of the north, and the diversity of the country’s wild spaces. These places have shaped her eye, her rhythm, and her sense of belonging.            </p>
@@ -257,7 +255,7 @@ Kuhi is a Kenyan traveller, photographer, and storyteller with a deep love for n
 Her mission is to guide others into this Kenya by curating journeys that invite travellers to slow down, to listen, and to see the land as she sees it: alive, untamed, and endlessly layered. Kuhi often travels with her guests, camera in hand, watching them fall in love with the places she already calls home. Because when they see Kenya through their eyes, she gets to witness that and it reminds her why she started Proudly Laikipian.
             </p> 
             <a href="/about" className="essence-link mb-24">
-              Our Story
+              Group trips, packages
             </a>
           </div>
         </div>
@@ -288,7 +286,7 @@ function CommitmentSection() {
         {/* Left Column: Image (order-2 on mobile) */}
         <div className="relative min-h-[70vh] lg:min-h-[90vh] lg:order-2">
           <Image
-            src="/images/commitment-landscape.png" // Your new landscape photo
+            src="/images/laikipia.png" // Your new landscape photo
             alt="Aerial view of Laikipia's rivers and landscape"
             layout="fill"
             objectFit="cover"
@@ -302,11 +300,10 @@ function CommitmentSection() {
             <h2 className="section-title-dark text-4xl md:text-5xl uppercase tracking-wider mb-10">
               OUR
               <br />
-              PLEDGE
+              OUR PLEDGE
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-12">
-              To explore the wild heart of Kenya is a rare privilege. This privilege comes with a profound responsibility: to tread lightly, to give back to the community, and to help preserve this land for generations to come. With every journey, our goal is simple: to leave Laikipia better than we found it.
-            </p> 
+To explore the wild heart of Kenya is a privilege. This privilege comes with a profound sense of responsibility: to tread lightly, give back to the community, and help preserve this land for future generations.  With every journey, our goal is simple: take nothing but photographs, leave nothing but footprints.            </p> 
             
             <Link href="/book" className="plan-journey-link">
               Book Your Journey
