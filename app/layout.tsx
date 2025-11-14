@@ -151,10 +151,10 @@ function Footer() {
               height={80} // You can adjust this
               className="h-20 w-auto" // Controls the visual size
             />
-            {/* --- NEW: Added the styled text logo --- */}
-            <h2 className="footer-logo-text hidden sm:block">
-              Proudly Laikipian
-            </h2>
+            {/* --- **** CHANGE #1: Replaced text and changed element to <p> **** --- */}
+            <p className="text-gray-400 italic text-lg hidden sm:block max-w-xs">
+              "When you leave a beautiful place, you carry it with you wherever you go"
+            </p>
           </Link>
         </div>
         
@@ -196,7 +196,7 @@ function Footer() {
           <div>
             <h3 className="footer-title">Links</h3>
             <a href="#" className="footer-link">Privacy Policy</a>
-            <a href="#" className="footer-link">Terms & Conditions</a>
+            {/* --- **** CHANGE #2: Removed "Terms & Conditions" link **** --- */}
           </div>
           
         </div>
