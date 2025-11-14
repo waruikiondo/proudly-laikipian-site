@@ -190,7 +190,7 @@ export default function AboutPage() {
       <ValuesSection />
       
       <FullBleedImage 
-        src="/images/about-mountain.png"
+        src="/images/auwana.png"
         alt="A view of a majestic mountain in Laikipia"
       />
     </>
