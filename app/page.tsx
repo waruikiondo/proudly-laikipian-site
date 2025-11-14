@@ -185,14 +185,7 @@ function TailoredSection() {
         
         {/* Left Column: Image container */}
         <div className="relative min-h-[70vh] lg:min-h-[90vh]">
-          {/* Background Image */}
-          <Image
-            src="/images/leopard-close.jpg" // Your large aerial background
-            alt="Aerial view of Laikipia landscape"
-            layout="fill"
-            objectFit="cover"
-            className="z-0"
-          />
+          
           
           {/* Inset Image Container (for positioning) */}
           <div className="absolute inset-0 flex items-center justify-center p-8">
@@ -200,7 +193,7 @@ function TailoredSection() {
               {/* Inset Image with White Border */}
               <div className="bg-white p-2 shadow-2xl">
                 <Image
-                  src="/images/plan-step1-inset.png" // Your inset helicopter photo
+                  src="/images/leopard-close.jpg" // Your inset helicopter photo
                   alt="Helicopter flying over Kenyan landscape"
                   width={800} // Set base width
                   height={600} // Set base height
