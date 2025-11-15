@@ -50,9 +50,8 @@ function StorySection() {
           {/* Inset Image Container (for positioning) */}
           <div className="absolute inset-0 flex items-center justify-center p-8">
             
-            {/* --- **** THIS IS THE LINE I CHANGED **** --- */}
+            {/* --- **** Inset image size reduced **** --- */}
             <div className="relative w-full max-w-md lg:max-w-none lg:w-[90%] lg:-mr-16 z-10">
-            {/* I reduced lg:w-[120%] to lg:w-[90%] and lg:-mr-24 to lg:-mr-16 */}
             
               {/* Inset Image with White Border */}
               <div className="bg-white p-2 shadow-2xl">
@@ -84,7 +83,6 @@ function StorySection() {
               Years later, that deep-rooted connection still lingers. What began as a childhood passion grew into a single, guiding purpose: to share the authentic Laikipia, led by the indigenous voices that know it best. Driven by this love for her home, Proudly Laikipian was born.
             </p> 
             
-            {/* --- 2. UPDATED LINK --- */}
             <Link href="/plan" className="plan-journey-link">
               Plan Your Journey
             </Link>
@@ -117,7 +115,6 @@ function PurposeSection() {
           that honours our heritage and preserves our wild spaces.
         </p>
 
-        {/* --- 3. UPDATED LINK --- */}
         <Link 
           href="/book" 
           className="plan-journey-link-light"
@@ -133,11 +130,10 @@ function PurposeSection() {
 // --- Values Section Component (UPDATED) ---
 function ValuesSection() {
   return (
-    // UPDATED: Removed overflow-hidden
     <section className="relative bg-grain">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2">
         
-        {/* Left Column: Image (UPDATED: No longer sticky) */}
+        {/* Left Column: Image */}
         <div className="relative h-[70vh] lg:h-auto">
           <Image
             src="/images/about-values.png" // Your new lodge image
@@ -164,17 +160,7 @@ function ValuesSection() {
             </div>
           </div>
           
-          {/* Block 2: Tailor-Made Journeys */}
-          <div className="values-text-block bg-grain">
-            <div className="max-w-md">
-              {/* Added <br /> to fix overflow */}
-              <h2 className="section-title-italic">
-                TAILOR-MADE
-                <br />
-                JOURNEYS
-              </h2>
-            </div>
-          </div>
+          {/* --- "TAILOR-MADE JOURNEYS" BLOCK REMOVED --- */}
 
         </div>
 
