@@ -179,9 +179,11 @@ export default function AboutPage() {
       <PurposeSection />
       <ValuesSection />
       
+      {/* --- **** THIS IS THE CHANGE: Added objectPosition **** --- */}
       <FullBleedImage 
         src="/images/auwana.png"
         alt="A view of a majestic mountain in Laikipia"
+        objectPosition="object-bottom" 
       />
     </>
   );
