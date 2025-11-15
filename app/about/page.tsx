@@ -55,8 +55,8 @@ function StorySection() {
                 <Image
                   src="/images/about-story-inset.png" // Your new inset photo
                   alt="Horses running in the Laikipia plains"
-                  width={800} // Set base width
-                  height={600} // Set base height
+                  width={600} // Set base width
+                  height={400} // Set base height
                   layout="responsive"
                   objectFit="cover"
                 />
