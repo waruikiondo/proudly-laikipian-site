@@ -186,15 +186,27 @@ function TailoredSection() {
         {/* Left Column: Image container */}
         <div className="relative min-h-[70vh] lg:min-h-[90vh]">
           
+          {/* --- **** CHANGE #1: Added Background Image **** --- */}
+          <Image
+            src="/images/laikipia.png" // Your new background image
+            alt="Laikipia landscape"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
+          />
           
           {/* Inset Image Container (for positioning) */}
           <div className="absolute inset-0 flex items-center justify-center p-8">
-            <div className="relative w-full max-w-md lg:max-w-none lg:w-[120%] lg:-mr-24 z-10">
+            
+            {/* --- **** CHANGE #2: Reduced Inset Image Size **** --- */}
+            <div className="relative w-full max-w-md lg:max-w-none lg:w-[90%] lg:-mr-16 z-10">
+            {/* I reduced lg:w-[120%] to lg:w-[90%] and lg:-mr-24 to lg:-mr-16 */}
+
               {/* Inset Image with White Border */}
               <div className="bg-white p-2 shadow-2xl">
                 <Image
-                  src="/images/leopard-close.jpg" // Your inset helicopter photo
-                  alt="Helicopter flying over Kenyan landscape"
+                  src="/images/leopard-close.jpg" // This is your inset image (as requested)
+                  alt="A leopard peers from a tree" // --- **** CHANGE #3: Updated Alt Text **** ---
                   width={800} // Set base width
                   height={600} // Set base height
                   layout="responsive"
@@ -213,7 +225,7 @@ function TailoredSection() {
               DESIGNED FOR YOU
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-Explore Kenya your way. We work with trusted partners whose services we know and rely on. Whether you are walking with rhinos in Samburu, experiencing a cultural dance in the Maasai Mara, watching the rare black leopards in Laikipia, or trekking to the top of Mount Kenya, every detail is handled with care and precision.            </p>
+Explore Kenya your way. We work with trusted partners whose services we know and rely on. Whether you are walking with rhinos in Samburu, experiencing a cultural dance in the Maasai Mara, watching the rare black leopards in Laikipia, or trekking to the top of Mount Kenya, every detail is handled with care and precision.           </p>
             
             
             <Link href="/plan" className="plan-journey-link">
@@ -226,6 +238,7 @@ Explore Kenya your way. We work with trusted partners whose services we know and
     </section>
   );
 }
+
 
 
 // --- Meet The Guide Section Component ---
