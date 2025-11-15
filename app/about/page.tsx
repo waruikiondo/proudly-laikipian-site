@@ -49,14 +49,18 @@ function StorySection() {
           
           {/* Inset Image Container (for positioning) */}
           <div className="absolute inset-0 flex items-center justify-center p-8">
-            <div className="relative w-full max-w-md lg:max-w-none lg:w-[120%] lg:-mr-24 z-10">
+            
+            {/* --- **** THIS IS THE LINE I CHANGED **** --- */}
+            <div className="relative w-full max-w-md lg:max-w-none lg:w-[90%] lg:-mr-16 z-10">
+            {/* I reduced lg:w-[120%] to lg:w-[90%] and lg:-mr-24 to lg:-mr-16 */}
+            
               {/* Inset Image with White Border */}
               <div className="bg-white p-2 shadow-2xl">
                 <Image
                   src="/images/about-story-inset.png" // Your new inset photo
                   alt="Horses running in the Laikipia plains"
-                  width={600} // Set base width
-                  height={400} // Set base height
+                  width={800} // Set base width
+                  height={600} // Set base height
                   layout="responsive"
                   objectFit="cover"
                 />
