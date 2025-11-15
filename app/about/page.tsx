@@ -181,7 +181,7 @@ export default function AboutPage() {
       
       {/* --- **** THIS IS THE CHANGE: Added objectPosition **** --- */}
       <FullBleedImage 
-        src="/images/auwana.png"
+        src="/images/diani.jpg"
         alt="A view of a majestic mountain in Laikipia"
         objectPosition="object-bottom" 
       />
