@@ -153,7 +153,7 @@ function AboutIntroSection() {
         </h2>
 
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
-Kenya is more than a destination for us; it is where our story begins. From the vast plains of Laikipia to the peaks of Mount Kenya, the rugged north, and the sandy coast, our roots run deep across this land. We share local insight and connections that open doors few travelers see, guiding you beyond the familiar  into the Kenya that lives off the beaten track.
+Kenya is more than a destination for us; it is where our story begins. From the vast plains of Laikipia to the peaks of Mount Kenya, the rugged north, and the sandy coast, our roots run deep across this land. We share local insight and connections that open doors few travelers see, guiding you beyond the familiar Indigeno the Kenya that lives off the beaten track.
 </p>
         
         <p className="text-lg md:text-xl text-gray-300 italic mb-12">
@@ -234,17 +234,14 @@ Explore Kenya your way. We work with trusted partners whose services we know and
 
 
 
-// --- **** UPDATED Meet The Guide Section Component **** ---
+// --- Meet The Guide Section Component ---
 function MeetTheGuideSection() {
   return (
-    // --- 1. Made section h-screen and removed overflow-hidden ---
     <section className="bg-dark-grain text-gray-300 h-screen">
-      {/* --- 2. Made grid h-full --- */}
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 h-full">
         
-        {/* Left Column: Text content (this part will scroll) */}
-        <div className="relative z-10 py-20 md:py-32 px-8 md:px-24 flex items-center"> {/* Added flex items-center */}
-          {/* This content will scroll */}
+        {/* Left Column: Text content */}
+        <div className="relative z-10 py-20 md:py-32 px-8 md:px-24 flex items-center"> 
           <div className="max-w-md">
             <h2 className="section-title text-4xl md:text-5xl uppercase tracking-wider mb-10">
               MEET KUHI
@@ -261,14 +258,12 @@ Her mission is to guide others into this Kenya by curating journeys that invite 
         </div>
 
         {/* Right Column: Image */}
-        {/* --- 3. REMOVED sticky classes, made h-full --- */}
         <div className="relative h-full">
           <Image
             src="/images/Kuhi-paul.jpg" // Your new guide portrait
             alt="A guide from Proudly Laikipian on a safari vehicle"
             layout="fill"
             objectFit="cover"
-            // --- **** THIS IS THE FIX **** ---
             // This aligns the image to the top, cutting off the feet
             className="z-0 object-top" 
           />
@@ -279,16 +274,13 @@ Her mission is to guide others into this Kenya by curating journeys that invite 
   );
 }
 
-// --- **** UPDATED Commitment Section Component **** ---
+// --- Commitment Section Component ---
 function CommitmentSection() {
   return (
-    // --- 1. Made section h-screen ---
     <section className="relative bg-eco-beige h-screen">
-      {/* --- 2. Made grid h-full --- */}
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 h-full">
         
         {/* Left Column: Image (order-2 on mobile) */}
-        {/* --- 3. Made image h-full and removed min-heights --- */}
         <div className="relative h-full lg:order-2">
           <Image
             src="/images/dam.jpg" // Your new landscape photo
@@ -300,7 +292,6 @@ function CommitmentSection() {
         </div>
 
         {/* Right Column: Text content (order-1 on mobile) */}
-        {/* --- 4. Made text column h-full --- */}
         <div className="relative z-10 flex items-center py-16 px-8 md:p-24 bg-eco-beige lg:order-1 h-full">
           <div className="max-w-md">
             <h2 className="section-title-dark text-4xl md:text-5xl uppercase tracking-wider mb-10">
@@ -323,7 +314,7 @@ To explore the wild heart of Kenya is a privilege. This privilege comes with a p
 }
 
 
-// --- **** UPDATED Main App Component **** ---
+// --- Main App Component ---
 export default function Page() {
   return (
     <>
@@ -331,10 +322,7 @@ export default function Page() {
       <AboutIntroSection />
       <TailoredSection />
 
-      {/* --- **** THIS IS THE NEW STICKY WRAPPER **** --- */}
-      {/* This outer div provides the total scroll height (300vh = 3 sections)
-        Each child div is sticky and has a z-index to stack on top of the last.
-      */}
+      {/* --- **** THIS IS THE STICKY WRAPPER **** --- */}
       <div className="relative h-[300vh]">
         
         {/* Panel 1: Meet Kuhu (Stays on bottom) */}
@@ -351,7 +339,9 @@ export default function Page() {
         </div>
         
         {/* Panel 3: Commitment (Scrolls over Zebra) */}
-        <div className="sticky top-0 h-screen z-30">
+        {/* --- **** THIS IS THE FIX: Added bg-eco-beige **** --- */}
+        {/* This solid background will hide the "Meet Kuhi" section behind it */}
+        <div className="sticky top-0 h-screen z-30 bg-eco-beige">
           <CommitmentSection />
         </div>
 
