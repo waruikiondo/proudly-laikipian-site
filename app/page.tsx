@@ -127,7 +127,6 @@ function Hero() {
         <p className="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
 Discover the untamed beauty of Kenya.
         </p> 
-        {/* --- THIS IS THE FIX: Was </f> --- */}
         
         <Link 
           href="/plan" 
@@ -183,7 +182,6 @@ function TailoredSection() {
         {/* Left Column: Image container */}
         <div className="relative min-h-[70vh] lg:min-h-[90vh]">
           
-          {/* --- **** CHANGE #1: Added Background Image **** --- */}
           <Image
             src="/images/laikipia.png" // Your new background image
             alt="Laikipia landscape"
@@ -195,17 +193,15 @@ function TailoredSection() {
           {/* Inset Image Container (for positioning) */}
           <div className="absolute inset-0 flex items-center justify-center p-8">
             
-            {/* --- **** CHANGE #2: Reduced Inset Image Size **** --- */}
             <div className="relative w-full max-w-md lg:max-w-none lg:w-[90%] lg:-mr-16 z-10">
-            {/* I reduced lg:w-[120%] to lg:w-[90%] and lg:-mr-24 to lg:-mr-16 */}
 
               {/* Inset Image with White Border */}
               <div className="bg-white p-2 shadow-2xl">
                 <Image
-                  src="/images/leopard-close.jpg" // This is your inset image (as requested)
-                  alt="A leopard peers from a tree" // --- **** CHANGE #3: Updated Alt Text **** ---
-                  width={800} // Set base width
-                  height={600} // Set base height
+                  src="/images/leopard-close.jpg" // This is your inset image
+                  alt="A leopard peers from a tree"
+                  width={800}
+                  height={600}
                   layout="responsive"
                   objectFit="cover"
                 />
@@ -241,9 +237,9 @@ Explore Kenya your way. We work with trusted partners whose services we know and
 // --- **** UPDATED Meet The Guide Section Component **** ---
 function MeetTheGuideSection() {
   return (
-    // --- **** 1. Made section h-screen and removed overflow-hidden **** ---
+    // --- 1. Made section h-screen and removed overflow-hidden ---
     <section className="bg-dark-grain text-gray-300 h-screen">
-      {/* --- **** 2. Made grid h-full **** --- */}
+      {/* --- 2. Made grid h-full --- */}
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 h-full">
         
         {/* Left Column: Text content (this part will scroll) */}
@@ -265,14 +261,16 @@ Her mission is to guide others into this Kenya by curating journeys that invite 
         </div>
 
         {/* Right Column: Image */}
-        {/* --- **** 3. REMOVED sticky classes, made h-full **** --- */}
+        {/* --- 3. REMOVED sticky classes, made h-full --- */}
         <div className="relative h-full">
           <Image
             src="/images/Kuhi-paul.jpg" // Your new guide portrait
             alt="A guide from Proudly Laikipian on a safari vehicle"
             layout="fill"
             objectFit="cover"
-            className="z-0"
+            // --- **** THIS IS THE FIX **** ---
+            // This aligns the image to the top, cutting off the feet
+            className="z-0 object-top" 
           />
         </div>
         
@@ -284,13 +282,13 @@ Her mission is to guide others into this Kenya by curating journeys that invite 
 // --- **** UPDATED Commitment Section Component **** ---
 function CommitmentSection() {
   return (
-    // --- **** 1. Made section h-screen **** ---
+    // --- 1. Made section h-screen ---
     <section className="relative bg-eco-beige h-screen">
-      {/* --- **** 2. Made grid h-full **** --- */}
+      {/* --- 2. Made grid h-full --- */}
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 h-full">
         
         {/* Left Column: Image (order-2 on mobile) */}
-        {/* --- **** 3. Made image h-full and removed min-heights **** --- */}
+        {/* --- 3. Made image h-full and removed min-heights --- */}
         <div className="relative h-full lg:order-2">
           <Image
             src="/images/dam.jpg" // Your new landscape photo
@@ -302,7 +300,7 @@ function CommitmentSection() {
         </div>
 
         {/* Right Column: Text content (order-1 on mobile) */}
-        {/* --- **** 4. Made text column h-full **** --- */}
+        {/* --- 4. Made text column h-full --- */}
         <div className="relative z-10 flex items-center py-16 px-8 md:p-24 bg-eco-beige lg:order-1 h-full">
           <div className="max-w-md">
             <h2 className="section-title-dark text-4xl md:text-5xl uppercase tracking-wider mb-10">
