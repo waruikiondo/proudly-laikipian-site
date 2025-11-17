@@ -10,17 +10,14 @@ import FullBleedImage from './components/FullBleedImage';
 const heroVideos = [
   { id: 4, src: "/videos/ellis.mp4" },
   { id: 1, src: "/videos/first.mp4" },
-    { id: 4, src: "/videos/mtkenya.mp4" },
+  { id: 4, src: "/videos/mtkenya.mp4" },
   { id: 2, src: "/videos/second.mp4" },
   { id: 4, src: "/videos/coast2.mp4" },
   { id: 3, src: "/videos/third.mp4" },
   { id: 4, src: "/videos/ellisunny.mp4" },
   { id: 4, src: "/videos/fourth.mp4" },
-
-   { id: 4, src: "/videos/savannah.mp4" },
-   { id: 4, src: "/videos/coast.mp4" },
-   
-    
+  { id: 4, src: "/videos/savannah.mp4" },
+  { id: 4, src: "/videos/coast.mp4" },
 ];
 
 /*
@@ -157,7 +154,7 @@ function AboutIntroSection() {
         </h2>
 
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
-Kenya is more than a destination for us; it is where our story begins. From the vast plains of Laikipia to the peaks of Mount Kenya, the rugged north, and the sandy coast, our roots run deep across this land. We share local insight and connections that open doors few travelers see, guiding you beyond the familiar  into the Kenya that lives off the beaten track.
+Kenya is more than a destination for us; it is where our story begins. From the vast plains of Laikipia to the peaks of Mount Kenya, the rugged north, and the sandy coast, our roots run deep across this land. We share local insight and connections that open doors few travelers see, guiding you beyond the familiar  into the Kenya that lives off the beaten track.
 </p>
         
         <p className="text-lg md:text-xl text-gray-300 italic mb-12">
@@ -167,7 +164,7 @@ Kenya is more than a destination for us; it is where our story begins. From the 
         <Link 
           href="/book" 
           className="text-white text-sm uppercase tracking-widest font-medium py-3 px-6 border border-gray-500 rounded-md
-                     hover:bg-white hover:text-gray-900 transition duration-300"
+                      hover:bg-white hover:text-gray-900 transition duration-300"
         >
           Book Your Journey
         </Link>
@@ -241,22 +238,23 @@ Explore Kenya your way. We work with trusted partners whose services we know and
 
 
 
-// --- Meet The Guide Section Component ---
+// --- **** UPDATED Meet The Guide Section Component **** ---
 function MeetTheGuideSection() {
   return (
-    // The parent section is the bounding box for the sticky element
-    <section className="bg-dark-grain text-gray-300 overflow-hidden">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2">
+    // --- **** 1. Made section h-screen and removed overflow-hidden **** ---
+    <section className="bg-dark-grain text-gray-300 h-screen">
+      {/* --- **** 2. Made grid h-full **** --- */}
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 h-full">
         
         {/* Left Column: Text content (this part will scroll) */}
-        <div className="relative z-10 py-20 md:py-32 px-8 md:px-24">
+        <div className="relative z-10 py-20 md:py-32 px-8 md:px-24 flex items-center"> {/* Added flex items-center */}
           {/* This content will scroll */}
           <div className="max-w-md">
             <h2 className="section-title text-4xl md:text-5xl uppercase tracking-wider mb-10">
               MEET KUHI
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-Kuhi is a Kenyan traveller, photographer, and storyteller with a deep love for nature, hiking, and wildlife. Through Proudly Laikipian, she shares the Kenya that raised her. The open skies of Laikipia, the raw beauty of the north, and the diversity of the country’s wild spaces. These places have shaped her eye, her rhythm, and her sense of belonging.            </p>
+Kuhi is a Kenyan traveller, photographer, and storyteller with a deep love for nature, hiking, and wildlife. Through Proudly Laikipian, she shares the Kenya that raised her. The open skies of Laikipia, the raw beauty of the north, and the diversity of the country’s wild spaces. These places have shaped her eye, her rhythm, and her sense of belonging.           </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-12">
 Her mission is to guide others into this Kenya by curating journeys that invite travellers to slow down, to listen, and to see the land as she sees it: alive, untamed, and endlessly layered. Kuhi often travels with her guests, camera in hand, watching them fall in love with the places she already calls home. Because when they see Kenya through their eyes, she gets to witness that and it reminds her why she started Proudly Laikipian.
             </p> 
@@ -266,9 +264,9 @@ Her mission is to guide others into this Kenya by curating journeys that invite 
           </div>
         </div>
 
-        {/* Right Column: Image (this part will be sticky) */}
-        {/* This div sticks to the top within its parent 'section' */}
-        <div className="relative h-[70vh] lg:h-screen lg:sticky lg:top-0">
+        {/* Right Column: Image */}
+        {/* --- **** 3. REMOVED sticky classes, made h-full **** --- */}
+        <div className="relative h-full">
           <Image
             src="/images/Kuhi-paul.jpg" // Your new guide portrait
             alt="A guide from Proudly Laikipian on a safari vehicle"
@@ -283,14 +281,17 @@ Her mission is to guide others into this Kenya by curating journeys that invite 
   );
 }
 
-// --- Commitment Section Component (UPDATED) ---
+// --- **** UPDATED Commitment Section Component **** ---
 function CommitmentSection() {
   return (
-    <section className="relative bg-eco-beige">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2">
+    // --- **** 1. Made section h-screen **** ---
+    <section className="relative bg-eco-beige h-screen">
+      {/* --- **** 2. Made grid h-full **** --- */}
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 h-full">
         
         {/* Left Column: Image (order-2 on mobile) */}
-        <div className="relative min-h-[70vh] lg:min-h-[90vh] lg:order-2">
+        {/* --- **** 3. Made image h-full and removed min-heights **** --- */}
+        <div className="relative h-full lg:order-2">
           <Image
             src="/images/dam.jpg" // Your new landscape photo
             alt="Aerial view of Laikipia's rivers and landscape"
@@ -301,7 +302,8 @@ function CommitmentSection() {
         </div>
 
         {/* Right Column: Text content (order-1 on mobile) */}
-        <div className="relative z-10 flex items-center py-16 px-8 md:p-24 bg-eco-beige lg:order-1">
+        {/* --- **** 4. Made text column h-full **** --- */}
+        <div className="relative z-10 flex items-center py-16 px-8 md:p-24 bg-eco-beige lg:order-1 h-full">
           <div className="max-w-md">
             <h2 className="section-title-dark text-4xl md:text-5xl uppercase tracking-wider mb-10">
               OUR
@@ -309,7 +311,7 @@ function CommitmentSection() {
               OUR PLEDGE
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-12">
-To explore the wild heart of Kenya is a privilege. This privilege comes with a profound sense of responsibility: to tread lightly, give back to the community, and help preserve this land for future generations.  With every journey, our goal is simple: take nothing but photographs, leave nothing but footprints.            </p> 
+To explore the wild heart of Kenya is a privilege. This privilege comes with a profound sense of responsibility: to tread lightly, give back to the community, and help preserve this land for future generations. With every journey, our goal is simple: take nothing but photographs, leave nothing but footprints.           </p> 
             
             <Link href="/book" className="plan-journey-link">
               Book Your Journey
@@ -323,25 +325,40 @@ To explore the wild heart of Kenya is a privilege. This privilege comes with a p
 }
 
 
-// --- Main App Component ---
-// This is the root of your application.
-export default function Page() { // Renamed to Page
+// --- **** UPDATED Main App Component **** ---
+export default function Page() {
   return (
     <>
-      {/* Header and Footer are now in app/layout.tsx 
-        This file only contains the sections for the Homepage.
-      */}
       <Hero />
       <AboutIntroSection />
       <TailoredSection />
-      <MeetTheGuideSection />
-      
-      <FullBleedImage 
-        src="/images/zebra-bw.png"
-        alt="A herd of zebras in black and white in Laikipia"
-      />
-      
-      <CommitmentSection />
+
+      {/* --- **** THIS IS THE NEW STICKY WRAPPER **** --- */}
+      {/* This outer div provides the total scroll height (300vh = 3 sections)
+        Each child div is sticky and has a z-index to stack on top of the last.
+      */}
+      <div className="relative h-[300vh]">
+        
+        {/* Panel 1: Meet Kuhu (Stays on bottom) */}
+        <div className="sticky top-0 h-screen z-10">
+          <MeetTheGuideSection />
+        </div>
+        
+        {/* Panel 2: Zebra Image (Scrolls over Kuhu) */}
+        <div className="sticky top-0 h-screen z-20">
+          <FullBleedImage 
+            src="/images/zebra-bw.png"
+            alt="A herd of zebras in black and white in Laikipia"
+          />
+        </div>
+        
+        {/* Panel 3: Commitment (Scrolls over Zebra) */}
+        <div className="sticky top-0 h-screen z-30">
+          <CommitmentSection />
+        </div>
+
+      </div>
+      {/* --- End of Sticky Wrapper --- */}
     </>
   );
 }
