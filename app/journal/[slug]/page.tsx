@@ -41,42 +41,32 @@ export default function JournalPost() {
       {/* Hero Image */}
       <div className="max-w-5xl mx-auto px-6 mb-16">
         <div className="relative w-full aspect-video md:aspect-[2/1] bg-gray-200">
-          <Image
+          {/* We use standard img for external URLs if not configured in next.config.js, 
+              but since these are standard links, <Image> might require config. 
+              Safe fallback is standardized <img> for external WP content or unoptimized <Image> */}
+          <img
             src={post.image}
             alt={post.title}
-            layout="fill"
-            objectFit="cover"
-            priority
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
 
       {/* Body Content */}
       <div className="max-w-2xl mx-auto px-6 prose prose-lg">
+        {/* Excerpt */}
         <p className="text-xl text-gray-800 italic mb-8 leading-relaxed font-light">
             {post.excerpt}
         </p>
         
-        <div className="text-gray-700 font-light leading-loose space-y-6">
-          <p>
-            The landscape here speaks a language older than words. It is written in the red earth, 
-            whispered by the acacia thorns, and carried on the wind that sweeps down from Mount Kenya.
-            To be here is to surrender to a rhythm that has existed long before us and will continue long after.
-          </p>
-          
-          <p>
-            Our journey began at first light. The air was crisp, carrying the scent of wild sage and damp earth.
-            As we moved deeper into the conservancy, the signs of life became apparent—not just in the animals we saw,
-            but in the tracks they left behind.
-          </p>
-
-          <h3 className="uppercase tracking-widest text-sm font-bold mt-12 mb-6 text-black">A Legacy of Conservation</h3>
-          
-          <p>
-            Proudly Laikipian is committed to preserving these spaces. It is a delicate balance, one that requires
-            constant vigilance and a deep respect for the natural world.
-          </p>
-        </div>
+        {/* DYNAMIC CONTENT RENDERER */}
+        {/* We use dangerouslySetInnerHTML to render the HTML string from journalData.ts.
+           The classes inside className style the paragraphs (p) and headers (h2/h3) automatically.
+        */}
+        <div 
+          className="text-gray-700 font-light leading-loose space-y-6 [&>p]:mb-6 [&>h3]:text-xl [&>h3]:font-serif [&>h3]:mt-10 [&>h3]:text-black"
+          dangerouslySetInnerHTML={{ __html: post.content || '' }}
+        />
       </div>
 
       {/* Footer / Back Link */}
