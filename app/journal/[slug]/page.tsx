@@ -22,7 +22,8 @@ export default function JournalPost() {
   }
 
   return (
-    <article className="min-h-screen bg-[#fcfbf9] text-[#1a1a1a] pt-32 pb-24">
+    // --- UPDATED PADDING: Changed pt-32 to pt-48 md:pt-64 ---
+    <article className="min-h-screen bg-[#fcfbf9] text-[#1a1a1a] pt-48 md:pt-64 pb-24">
       
       {/* Header Area */}
       <div className="max-w-3xl mx-auto px-6 text-center mb-12">
@@ -56,7 +57,6 @@ export default function JournalPost() {
             {post.excerpt}
         </p>
         
-        {/* Placeholder for article content */}
         <div className="text-gray-700 font-light leading-loose space-y-6">
           <p>
             The landscape here speaks a language older than words. It is written in the red earth, 
